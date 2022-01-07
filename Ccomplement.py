@@ -10,4 +10,19 @@ reversecomplement("AAGCT") should return "AGCTT".
 """
 
 def reversecomplement(dna):
-  pass  # delete this line when you start writing your code
+  x = list(dna)
+  for element in x: 
+    if element != "A" and element != "C" and element != "G" and element != "T":
+      return ("Error")
+  z = ""
+  x.reverse()
+  for i in x:
+    if i == "A":
+      z += "T"
+    if i == "C":
+      z += "G"
+    if i == "G":
+      z += "C"
+    if i == "T":
+      z += "A"
+  return z
