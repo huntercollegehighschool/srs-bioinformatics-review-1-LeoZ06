@@ -11,4 +11,18 @@ For example, hammingdistance("TTAC", "TGAA") should return 2.
 """
 
 def hammingdistance(dna1, dna2):
-  pass  # delete this line when you start writing your code
+  x = list(dna1)
+  for element in x: 
+    if element != "A" and element != "C" and element != "G" and element != "T":
+      return ("Error")
+  y = list(dna2)
+  for element in y: 
+    if element != "A" and element != "C" and element != "G" and element != "T":
+      return ("Error")
+  if len(x) != len(y):
+    return ("Error")
+  z = 0
+  for i in range(len(dna1)):
+    if dna1[i] != dna2[i]:
+      z += 1
+  return z
